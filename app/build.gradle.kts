@@ -1,4 +1,5 @@
 import com.android.tools.r8.internal.ks
+import org.apache.tools.ant.util.JavaEnvUtils.VERSION_11
 import org.gradle.internal.impldep.org.junit.experimental.categories.Categories.CategoryFilter.exclude
 
 plugins {
@@ -13,12 +14,12 @@ configurations.all {
 
 android {
     namespace = "com.example.myroomapplication"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.myroomapplication"
         minSdk = 28
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -35,11 +36,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 
     buildFeatures {
